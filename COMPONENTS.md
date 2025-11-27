@@ -1,4 +1,4 @@
-# 🧱 Component Library — Ayanga Store
+# 🧱 Component Library — Tech Store
 
 Complete component specifications with Tailwind CSS classes and usage examples.
 
@@ -793,7 +793,7 @@ Complete component specifications with Tailwind CSS classes and usage examples.
           <span className="text-white font-bold text-h5">A</span>
         </div>
         <span className="text-h4 font-bold text-neutral-900 dark:text-dark-text-primary">
-          Ayanga Store
+          Tech Store
         </span>
       </a>
 

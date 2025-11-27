@@ -24,7 +24,7 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 text-body-sm text-neutral-600 dark:text-dark-text-secondary">
               <li><a href="tel:+97670111111" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">7011-1111</a></li>
-              <li><a href="mailto:info@ayangastore.mn" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">info@ayangastore.mn</a></li>
+              <li><a href="mailto:info@store.mn" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">info@store.mn</a></li>
               <li><Link href="/contact" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Contact Form</Link></li>
             </ul>
           </div>

@@ -1,4 +1,4 @@
-# Ayanga Store - Next.js E-commerce Platform
+# Tech Store - Next.js E-commerce Platform
 
 A modern, premium e-commerce platform built with Next.js 14, TypeScript, and Tailwind CSS.
 
@@ -174,7 +174,7 @@ npm run lint
 
 ## 📄 License
 
-This project is proprietary to Ayanga Store.
+This project is proprietary to Tech Store.
 
 ## 🤝 Contributing
 

@@ -1,4 +1,4 @@
-# 📊 Project Summary — Ayanga Store Design System
+# 📊 Project Summary — Tech Store Design System
 
 **Complete UI/UX Design Documentation**  
 **Version:** 1.0.0 | **Date:** November 24, 2025  
@@ -7,7 +7,7 @@
 
 ## 🎯 Project Overview
 
-**Ayanga Store** is a modern, premium e-commerce platform for tech products (smartphones, tablets, laptops, accessories) targeting the Mongolian market with international design standards.
+**Tech Store** is a modern, premium e-commerce platform for tech products (smartphones, tablets, laptops, accessories) targeting the Mongolian market with international design standards.
 
 ### Design Goals
 - 🏆 Premium tech aesthetic (Apple/Samsung inspired)
@@ -569,12 +569,12 @@ All code is ready to copy and paste. No Figma required.
 
 ---
 
-**🚀 Start building Ayanga Store today!**
+**🚀 Start building Tech Store today!**
 
 **Designed with ❤️ for modern e-commerce**  
 **Version 1.0.0 | November 24, 2025**
 
 ---
 
-© 2025 Ayanga Store Design System. All rights reserved.
+© 2025 Tech Store Design System. All rights reserved.
 

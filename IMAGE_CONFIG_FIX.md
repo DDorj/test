@@ -131,11 +131,11 @@ remotePatterns: [
   // ...existing patterns
   {
     protocol: 'https',
-    hostname: 'cdn.ayangastore.mn',
+    hostname: 'cdn.Techstore.mn',
   },
   {
     protocol: 'https',
-    hostname: 'images.ayangastore.mn',
+    hostname: 'images.Techstore.mn',
   },
 ]
 ```

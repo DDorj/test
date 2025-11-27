@@ -1,4 +1,4 @@
-# 🔄 User Flows — Ayanga Store
+# 🔄 User Flows — Tech Store
 
 Complete user journey maps and interaction flows.
 

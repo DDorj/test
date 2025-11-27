@@ -1,4 +1,4 @@
-# 🚀 Ayanga Store - Setup & Installation Guide
+# 🚀 Tech Store - Setup & Installation Guide
 
 Complete setup instructions for running the project.
 
@@ -59,7 +59,7 @@ npm start
 ## 📁 Project Structure Created
 
 ```
-ayanga-store/
+Tech-store/
 ├── src/
 │   ├── app/
 │   │   ├── (shop)/

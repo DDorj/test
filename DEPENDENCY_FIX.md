@@ -187,5 +187,5 @@ Open: **http://localhost:3000**
 **Time**: ~2 minutes
 **Packages**: 409 installed successfully
 
-Your Ayanga Store project is ready to develop! 🚀
+Your Tech Store project is ready to develop! 🚀
 

@@ -1,4 +1,4 @@
-# 🎨 Ayanga Store — UI/UX Design System
+# 🎨 Tech Store — UI/UX Design System
 ## Modern E-commerce Platform Design Documentation
 
 **Version:** 1.0.0  
@@ -633,5 +633,5 @@ export const tokens = {
 
 **Document Version**: 1.0.0  
 **Last Updated**: November 24, 2025  
-**Maintained By**: Ayanga Store Development Team
+**Maintained By**: Tech Store Development Team
 

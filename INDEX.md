@@ -1,4 +1,4 @@
-# 📖 Documentation Index — Ayanga Store
+# 📖 Documentation Index — Tech Store
 
 Quick navigation guide for all design system documentation.
 
@@ -8,7 +8,7 @@ Quick navigation guide for all design system documentation.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    AYANGA STORE                             │
+│                    Tech STORE                             │
 │              Design System Documentation                     │
 │                   Version 1.0.0                             │
 └─────────────────────────────────────────────────────────────┘
@@ -442,6 +442,6 @@ All documentation is production-ready and includes:
 
 **Happy Building! 🚀**
 
-**Ayanga Store Design System v1.0.0**  
+**Tech Store Design System v1.0.0**  
 **November 24, 2025**
 

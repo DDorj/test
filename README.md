@@ -1,4 +1,4 @@
-# 🛍️ Ayanga Store — Complete UI/UX Design System
+# 🛍️ Tech Store — Complete UI/UX Design System
 
 **Version:** 1.0.0  
 **Date:** November 24, 2025  
@@ -8,7 +8,7 @@
 
 ## 📚 Documentation Overview
 
-This is a complete, production-ready UI/UX design system for **Ayanga Store** — a modern Mongolian e-commerce platform specializing in smartphones, tablets, laptops, and tech accessories.
+This is a complete, production-ready UI/UX design system for **Tech Store** — a modern Mongolian e-commerce platform specializing in smartphones, tablets, laptops, and tech accessories.
 
 ### 📄 Documentation Files
 
@@ -249,10 +249,10 @@ npm install date-fns
 ### 1. Project Setup
 ```bash
 # Create Next.js app
-npx create-next-app@latest ayanga-store --typescript --tailwind --app
+npx create-next-app@latest Tech-store --typescript --tailwind --app
 
 # Install dependencies
-cd ayanga-store
+cd Tech-store
 npm install @heroicons/react zustand react-hook-form zod @hookform/resolvers
 ```
 
@@ -432,7 +432,7 @@ For questions or clarifications about this design system:
 
 ## 📜 License
 
-This design system is proprietary to Ayanga Store.
+This design system is proprietary to Tech Store.
 
 ---
 
@@ -459,6 +459,6 @@ This design system is **developer-ready** and can be implemented immediately. Al
 
 **Start building today!** 🚀
 
-**Designed with ❤️ for Ayanga Store**  
+**Designed with ❤️ for Tech Store**  
 **Version 1.0.0 | November 24, 2025**
 

@@ -1,4 +1,4 @@
-# 📂 Ayanga Store - Project Files Index
+# 📂 Tech Store - Project Files Index
 
 Quick reference to all generated files.
 

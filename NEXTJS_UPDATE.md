@@ -280,7 +280,7 @@ npm run lint -- --fix
 
 ---
 
-**Your Ayanga Store is now running on the latest stable Next.js and React!** 🚀
+**Your Tech Store is now running on the latest stable Next.js and React!** 🚀
 
 **Current versions:**
 - Next.js 16.0.3

@@ -1,4 +1,4 @@
-# 🛠️ Implementation Guide — Ayanga Store
+# 🛠️ Implementation Guide — Tech Store
 
 Step-by-step development guide with Next.js App Router & Tailwind CSS.
 
@@ -25,10 +25,10 @@ Step-by-step development guide with Next.js App Router & Tailwind CSS.
 
 ```bash
 # Create new Next.js app with TypeScript
-npx create-next-app@latest ayanga-store --typescript --tailwind --app --src-dir
+npx create-next-app@latest Tech-store --typescript --tailwind --app --src-dir
 
 # Navigate to project
-cd ayanga-store
+cd Tech-store
 ```
 
 ### Step 2: Install Dependencies
@@ -85,7 +85,7 @@ npm install @vercel/analytics
 ## 2. Folder Structure
 
 ```
-ayanga-store/
+Tech-store/
 ├── public/
 │   ├── images/
 │   │   ├── products/
@@ -440,7 +440,7 @@ export default config
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['localhost', 'ayangastore.mn', 'cdn.ayangastore.mn'],
+    domains: ['localhost', 'Techstore.mn', 'cdn.Techstore.mn'],
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
@@ -467,10 +467,10 @@ module.exports = nextConfig
 ```bash
 # App
 NEXT_PUBLIC_APP_URL=http://localhost:3000
-NEXT_PUBLIC_APP_NAME=Ayanga Store
+NEXT_PUBLIC_APP_NAME=Tech Store
 
 # Database
-DATABASE_URL=postgresql://user:password@localhost:5432/ayanga_store
+DATABASE_URL=postgresql://user:password@localhost:5432/Tech_store
 
 # Authentication
 NEXTAUTH_SECRET=your-secret-key
@@ -484,11 +484,11 @@ STRIPE_WEBHOOK_SECRET=whsec_...
 # Email
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
-SMTP_USER=noreply@ayangastore.mn
+SMTP_USER=noreply@Techstore.mn
 SMTP_PASSWORD=your-password
 
 # Storage (if using S3/CloudFlare)
-AWS_S3_BUCKET=ayanga-store-images
+AWS_S3_BUCKET=Tech-store-images
 AWS_ACCESS_KEY_ID=your-access-key
 AWS_SECRET_ACCESS_KEY=your-secret-key
 AWS_REGION=us-east-1
@@ -1175,7 +1175,7 @@ export async function generateMetadata({ params }): Promise<Metadata> {
   const product = await getProduct(params.slug)
   
   return {
-    title: `${product.name} | Ayanga Store`,
+    title: `${product.name} | Tech Store`,
     description: product.description,
     openGraph: {
       title: product.name,

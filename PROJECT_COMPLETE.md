@@ -1,4 +1,4 @@
-# ✅ PROJECT COMPLETE - Ayanga Store
+# ✅ PROJECT COMPLETE - Tech Store
 
 ## 🎉 Implementation Summary
 
