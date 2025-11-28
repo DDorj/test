@@ -26,6 +26,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 't-mobile.scene7.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.phonemart.ng',
+      },
     ],
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',

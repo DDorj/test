@@ -9,7 +9,7 @@ export const sampleProducts: Product[] = [
     price: 4499000,
     compareAtPrice: 6499000,
     images: [
-      'https://t-mobile.scene7.com/is/image/Tmusprod/Apple-iPhone-17-Pro-Cosmic-Orange-frontimage_v1',
+      'https://www.phonemart.ng/wp-content/uploads/2024/06/i15p.png',
       'https://t-mobile.scene7.com/is/image/Tmusprod/Apple-iPhone-17-Pro-Cosmic-Orange-frontimage_v1',
     ],
     category: 'smartphones',
