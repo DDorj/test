@@ -1,5 +1,5 @@
-import Header from '@/components/organisms/Header'
-import Footer from '@/components/organisms/Footer'
+import Header from '@/components/layout/Header'
+import Footer from '@/components/layout/Footer'
 
 export default function ShopLayout({
   children,

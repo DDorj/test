@@ -5,15 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52451fba-f18c-40aa-8087-60258b9e269a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CART_CATEGORY_MONGOLIAN.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PRODUCTCARD_WISHLIST_MONGOLIAN.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PRODUCT_DETAIL_MONGOLIAN.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IMPROVEMENTS_COMPLETE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/Footer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/product/ProductCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/product/ProductGrid.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(shop)/cart/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(shop)/cart/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(shop)/category/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(shop)/category/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(shop)/product/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(shop)/product/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(shop)/wishlist/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(shop)/wishlist/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/molecules/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/molecules/ProductCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(shop)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(shop)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(shop)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(shop)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/molecules/SearchBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/molecules/SearchBar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1763962915008</updated>
-      <workItem from="1763962916172" duration="39331000" />
+      <workItem from="1763962916172" duration="44933000" />
     </task>
     <servers />
   </component>

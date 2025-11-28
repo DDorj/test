@@ -2,7 +2,7 @@
 
 import { use, useState } from 'react'
 import { sampleProducts } from '@/lib/data'
-import ProductGrid from '@/components/organisms/ProductGrid'
+import ProductGrid from '@/components/product/ProductGrid'
 import Breadcrumb from '@/components/molecules/Breadcrumb'
 import { AdjustmentsHorizontalIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
@@ -71,22 +71,22 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
       <div className="lg:grid lg:grid-cols-[280px_1fr] lg:gap-8">
         {/* Filter Sidebar - Desktop */}
         <aside className="hidden lg:block">
-          <div className="bg-white dark:bg-dark-bg-secondary border border-neutral-200 dark:border-dark-border-default rounded-xl p-6 space-y-6 sticky top-24">
-            <div className="flex items-center justify-between">
-              <h3 className="text-h4 font-semibold text-neutral-900 dark:text-dark-text-primary">
+          <div className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-6 space-y-8 sticky top-24 transition-colors duration-300">
+            <div className="flex items-center justify-between pb-4 border-b border-neutral-200 dark:border-neutral-800">
+              <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
                 Шүүлтүүр
               </h3>
               <button 
                 onClick={clearFilters}
-                className="text-body-sm font-medium text-primary-600 dark:text-primary-400 hover:underline"
+                className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-300"
               >
-                Бүгдийг арилгах
+                Арилгах
               </button>
             </div>
 
             {/* Price Range */}
             <div>
-              <h4 className="text-label font-semibold text-neutral-900 dark:text-dark-text-primary mb-3">
+              <h4 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100 mb-4">
                 Үнийн хязгаар
               </h4>
               <div className="space-y-4">
@@ -97,31 +97,31 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
                   step="100000"
                   value={priceRange[1]}
                   onChange={(e) => setPriceRange([0, parseInt(e.target.value)])}
-                  className="w-full h-2 accent-primary-600 dark:accent-primary-500 cursor-pointer"
+                  className="w-full h-2 bg-neutral-200 dark:bg-neutral-700 rounded-lg appearance-none cursor-pointer accent-blue-600"
                 />
                 <div className="space-y-3">
                   <div>
-                    <label className="block text-body-sm text-neutral-600 dark:text-dark-text-secondary mb-1.5">
-                      Доод
+                    <label className="block text-xs font-medium text-neutral-600 dark:text-neutral-400 mb-2">
+                      Доод үнэ
                     </label>
                     <input
                       type="number"
                       placeholder="0"
                       value={priceRange[0]}
                       onChange={(e) => setPriceRange([parseInt(e.target.value) || 0, priceRange[1]])}
-                      className="w-full px-3 py-2.5 text-body bg-neutral-50 dark:bg-dark-bg-primary border border-neutral-300 dark:border-dark-border-default rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 min-h-[44px]"
+                      className="w-full px-4 py-2.5 text-sm bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
                     />
                   </div>
                   <div>
-                    <label className="block text-body-sm text-neutral-600 dark:text-dark-text-secondary mb-1.5">
-                      Дээд
+                    <label className="block text-xs font-medium text-neutral-600 dark:text-neutral-400 mb-2">
+                      Дээд үнэ
                     </label>
                     <input
                       type="number"
                       placeholder="10000000"
                       value={priceRange[1]}
                       onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value) || 10000000])}
-                      className="w-full px-3 py-2.5 text-body bg-neutral-50 dark:bg-dark-bg-primary border border-neutral-300 dark:border-dark-border-default rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 min-h-[44px]"
+                      className="w-full px-4 py-2.5 text-sm bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
                     />
                   </div>
                 </div>
@@ -130,29 +130,29 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
 
             {/* Stock Status */}
             <div>
-              <h4 className="text-label font-semibold text-neutral-900 dark:text-dark-text-primary mb-3">
+              <h4 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100 mb-4">
                 Нөөцийн байдал
               </h4>
-              <div className="space-y-2">
-                <label className="flex items-center gap-3 cursor-pointer group">
+              <div className="space-y-3">
+                <label className="flex items-center gap-3 cursor-pointer group p-2 rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors duration-300">
                   <input
                     type="checkbox"
                     checked={inStockOnly}
                     onChange={(e) => setInStockOnly(e.target.checked)}
-                    className="w-5 h-5 text-primary-600 rounded border-neutral-300 dark:border-dark-border-default focus:ring-2 focus:ring-primary-500"
+                    className="w-5 h-5 text-blue-600 rounded border-neutral-300 dark:border-neutral-600 focus:ring-2 focus:ring-blue-500"
                   />
-                  <span className="text-body text-neutral-700 dark:text-dark-text-primary group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                  <span className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
                     Нөөцөд байгаа
                   </span>
                 </label>
-                <label className="flex items-center gap-3 cursor-pointer group">
+                <label className="flex items-center gap-3 cursor-pointer group p-2 rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors duration-300">
                   <input
                     type="checkbox"
                     checked={onSaleOnly}
                     onChange={(e) => setOnSaleOnly(e.target.checked)}
-                    className="w-5 h-5 text-primary-600 rounded border-neutral-300 dark:border-dark-border-default focus:ring-2 focus:ring-primary-500"
+                    className="w-5 h-5 text-blue-600 rounded border-neutral-300 dark:border-neutral-600 focus:ring-2 focus:ring-blue-500"
                   />
-                  <span className="text-body text-neutral-700 dark:text-dark-text-primary group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                  <span className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
                     Хямдралтай
                   </span>
                 </label>

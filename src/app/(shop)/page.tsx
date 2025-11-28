@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { sampleProducts, categories } from '@/lib/data'
-import ProductGrid from '@/components/organisms/ProductGrid'
-import Button from '@/components/atoms/Button'
+import ProductGrid from '@/components/product/ProductGrid'
+import Button from '@/components/ui/Button'
 import { ChevronRightIcon, TruckIcon, CheckBadgeIcon, ShieldCheckIcon } from '@heroicons/react/24/outline'
 
 export default function HomePage() {
@@ -52,28 +52,28 @@ export default function HomePage() {
       </section>
 
       {/* Quick Categories */}
-      <section className="container py-12">
-        <h2 className="text-h2 font-bold text-neutral-900 dark:text-dark-text-primary mb-6">
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 className="text-3xl font-bold text-neutral-900 dark:text-neutral-100 mb-8">
           Ангилалаар хайх
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
           {categories.map((category) => (
             <Link
               key={category.id}
               href={`/category/${category.slug}`}
-              className="group p-6 bg-white dark:bg-dark-bg-secondary border border-neutral-200 dark:border-dark-border-default rounded-xl hover:shadow-md hover:-translate-y-1 transition-all duration-200"
+              className="group p-6 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl hover:shadow-md hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="w-16 h-16 mx-auto mb-4 bg-primary-100 dark:bg-primary-900/20 rounded-full flex items-center justify-center text-4xl">
+              <div className="w-16 h-16 mx-auto mb-4 bg-blue-50 dark:bg-blue-900/20 rounded-full flex items-center justify-center text-4xl">
                 {category.slug === 'smartphones' && '📱'}
                 {category.slug === 'tablets' && '💻'}
                 {category.slug === 'laptops' && '🖥️'}
                 {category.slug === 'watches' && '⌚'}
                 {category.slug === 'accessories' && '🎧'}
               </div>
-              <h3 className="text-h5 font-semibold text-center text-neutral-900 dark:text-dark-text-primary group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+              <h3 className="text-base font-semibold text-center text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                 {category.name}
               </h3>
-              <p className="text-body-sm text-center text-neutral-500 dark:text-dark-text-muted mt-1">
+              <p className="text-sm text-center text-neutral-500 dark:text-neutral-400 mt-2">
                 {category.productCount} бүтээгдэхүүн
               </p>
             </Link>
@@ -82,16 +82,16 @@ export default function HomePage() {
       </section>
 
       {/* Featured Products */}
-      <section className="container py-12">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-h2 font-bold text-neutral-900 dark:text-dark-text-primary flex items-center gap-2">
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="flex items-center justify-between mb-8">
+          <h2 className="text-3xl font-bold text-neutral-900 dark:text-neutral-100 flex items-center gap-2">
             <span>⚡</span>
             Онцлох бүтээгдэхүүн
           </h2>
           <Link href="/category/all">
             <Button variant="ghost" className="gap-2">
               Бүгдийг үзэх
-              <ChevronRightIcon className="w-4 h-4" />
+              <ChevronRightIcon className="w-5 h-5" />
             </Button>
           </Link>
         </div>
@@ -100,16 +100,16 @@ export default function HomePage() {
 
       {/* Sale Products */}
       {saleProducts.length > 0 && (
-        <section className="container py-12">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-h2 font-bold text-neutral-900 dark:text-dark-text-primary flex items-center gap-2">
+        <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-3xl font-bold text-neutral-900 dark:text-neutral-100 flex items-center gap-2">
               <span>🔥</span>
               Хямдралтай бүтээгдэхүүн
             </h2>
             <Link href="/category/sale">
               <Button variant="ghost" className="gap-2">
                 Бүгдийг үзэх
-                <ChevronRightIcon className="w-4 h-4" />
+                <ChevronRightIcon className="w-5 h-5" />
               </Button>
             </Link>
           </div>
@@ -118,32 +118,32 @@ export default function HomePage() {
       )}
 
       {/* Installment Banner */}
-      <section className="container py-12">
-        <div className="bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-primary-900/20 dark:to-secondary-900/20 border border-primary-200 dark:border-primary-800 rounded-2xl p-8 lg:p-12">
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border border-blue-200 dark:border-blue-800 rounded-2xl p-8 lg:p-12 shadow-sm">
           <div className="max-w-3xl">
-            <h2 className="text-h2 font-bold text-neutral-900 dark:text-dark-text-primary mb-4">
+            <h2 className="text-3xl font-bold text-neutral-900 dark:text-neutral-100 mb-4">
               💳 Хүссэн төхөөрөмжөө 0% хүүгийн лизингээр авах
             </h2>
-            <p className="text-body-lg text-neutral-600 dark:text-dark-text-secondary mb-6">
+            <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-6">
               36 сар хүртэл • Хүүгүй • Хурдан баталгаажуулалт
             </p>
-            <Button>Тооцоолох</Button>
+            <Button size="lg">Тооцоолох</Button>
           </div>
         </div>
       </section>
 
       {/* New Arrivals */}
       {newProducts.length > 0 && (
-        <section className="container py-12">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-h2 font-bold text-neutral-900 dark:text-dark-text-primary flex items-center gap-2">
+        <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-3xl font-bold text-neutral-900 dark:text-neutral-100 flex items-center gap-2">
               <span>🆕</span>
               Шинэ бүтээгдэхүүн
             </h2>
             <Link href="/category/new">
               <Button variant="ghost" className="gap-2">
                 Бүгдийг үзэх
-                <ChevronRightIcon className="w-4 h-4" />
+                <ChevronRightIcon className="w-5 h-5" />
               </Button>
             </Link>
           </div>
@@ -172,34 +172,34 @@ export default function HomePage() {
       {/*</section>*/}
 
       {/* Trust Badges */}
-      <section className="container py-12">
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-6 bg-white dark:bg-dark-bg-secondary border border-neutral-200 dark:border-dark-border-default rounded-xl text-center">
-            <TruckIcon className="w-12 h-12 mx-auto mb-4 text-primary-600 dark:text-primary-400" />
-            <h3 className="text-h5 font-semibold text-neutral-900 dark:text-dark-text-primary mb-2">
+          <div className="p-8 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl text-center transition-all duration-300 hover:shadow-md">
+            <TruckIcon className="w-12 h-12 mx-auto mb-4 text-blue-600 dark:text-blue-400" />
+            <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
               Үнэгүй хүргэлт
             </h3>
-            <p className="text-body-sm text-neutral-600 dark:text-dark-text-secondary">
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">
               Улаанбаатар хот даяар
             </p>
           </div>
 
-          <div className="p-6 bg-white dark:bg-dark-bg-secondary border border-neutral-200 dark:border-dark-border-default rounded-xl text-center">
-            <CheckBadgeIcon className="w-12 h-12 mx-auto mb-4 text-success-600 dark:text-success-400" />
-            <h3 className="text-h5 font-semibold text-neutral-900 dark:text-dark-text-primary mb-2">
+          <div className="p-8 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl text-center transition-all duration-300 hover:shadow-md">
+            <CheckBadgeIcon className="w-12 h-12 mx-auto mb-4 text-green-600 dark:text-green-400" />
+            <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
               100% Оригнал
             </h3>
-            <p className="text-body-sm text-neutral-600 dark:text-dark-text-secondary">
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">
               Бүх бүтээгдэхүүн баталгаатай
             </p>
           </div>
 
-          <div className="p-6 bg-white dark:bg-dark-bg-secondary border border-neutral-200 dark:border-dark-border-default rounded-xl text-center">
-            <ShieldCheckIcon className="w-12 h-12 mx-auto mb-4 text-primary-600 dark:text-primary-400" />
-            <h3 className="text-h5 font-semibold text-neutral-900 dark:text-dark-text-primary mb-2">
+          <div className="p-8 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl text-center transition-all duration-300 hover:shadow-md">
+            <ShieldCheckIcon className="w-12 h-12 mx-auto mb-4 text-blue-600 dark:text-blue-400" />
+            <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
               Найдвартай төлбөр
             </h3>
-            <p className="text-body-sm text-neutral-600 dark:text-dark-text-secondary">
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">
               SSL шифрлэлттэй
             </p>
           </div>
