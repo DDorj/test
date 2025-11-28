@@ -24,7 +24,7 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 text-body-sm text-neutral-600 dark:text-dark-text-secondary">
               <li><a href="tel:+97670111111" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">7011-1111</a></li>
-              <li><a href="mailto:info@ayangastore.mn" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">info@ayangastore.mn</a></li>
+              <li><a href="mailto:info@Techstore.mn" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">info@Techstore.mn</a></li>
               <li><Link href="/contact" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Холбоо барих хэсэг</Link></li>
             </ul>
           </div>
@@ -64,7 +64,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-neutral-200 dark:border-dark-border-default flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-body-sm text-neutral-600 dark:text-dark-text-secondary">
-            © 2025 Ayanga Store. Бүх эрх хуулиар хамгаалагдсан.
+            © 2025 Tech Store. Бүх эрх хуулиар хамгаалагдсан.
           </p>
           <div className="flex items-center gap-6">
             <Link href="/terms" className="text-body-sm text-neutral-600 dark:text-dark-text-secondary hover:text-primary-600 dark:hover:text-primary-400 transition-colors">

@@ -373,7 +373,7 @@ All Mongolian text displays correctly in:
 **Pages**: Cart + Category Filters
 **Quality**: Professional & Natural
 
-Your Ayanga Store cart and category filters are now fully in Mongolian! 🇲🇳
+Your Tech Store cart and category filters are now fully in Mongolian! 🇲🇳
 
 **Test it:**
 - Cart: http://localhost:3000/cart

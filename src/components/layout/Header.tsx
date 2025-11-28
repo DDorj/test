@@ -52,7 +52,7 @@ export default function Header() {
           <Link href="/" className="flex items-center flex-shrink-0">
             <Image
               src="/images/logo/Tech-ZONE-logo-hundlun-black-2.webp"
-              alt="Ayanga Store"
+              alt="Tech Store"
               width={160}
               height={40}
               priority

@@ -293,7 +293,7 @@ All should display Mongolian text correctly.
 **Encoding**: UTF-8
 **Display**: Working perfectly
 
-Your Ayanga Store homepage is now fully in Mongolian! 🇲🇳
+Your Tech Store homepage is now fully in Mongolian! 🇲🇳
 
 **View it:** http://localhost:3000
 

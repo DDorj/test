@@ -17,7 +17,7 @@ Footer and remaining Header elements have been fully translated to Mongolian.
 
 2. **Contact Us** → **Холбоо барих**
    - Phone: "7011-1111" (unchanged)
-   - Email: "info@ayangastore.mn" (updated)
+   - Email: "info@Techstore.mn" (updated)
    - "Contact Form" → "Холбоо барих хэсэг"
 
 3. **Customer Service** → **Үйлчилгээ**
@@ -32,7 +32,7 @@ Footer and remaining Header elements have been fully translated to Mongolian.
 
 ### Footer Bottom
 
-- **Copyright**: "© 2025 Tech Store. All rights reserved." → "© 2025 Ayanga Store. Бүх эрх хуулиар хамгаалагдсан."
+- **Copyright**: "© 2025 Tech Store. All rights reserved." → "© 2025 Tech Store. Бүх эрх хуулиар хамгаалагдсан."
 - **Terms**: "Terms" → "Үйлчилгээний нөхцөл"
 - **Privacy**: "Privacy" → "Нууцлалын бодлого"
 - **Cookies**: "Cookies" → "Күүкис"
@@ -152,7 +152,7 @@ Footer and remaining Header elements have been fully translated to Mongolian.
 │  • Ажлын байр    • Холбоо        • Буцаалт              │
 │                   барих хэсэг   • Хүргэлт              │
 ├────────────────────────────────────────────────────────┤
-│  © 2025 Ayanga Store. Бүх эрх хуулиар хамгаалагдсан.  │
+│  © 2025 Tech Store. Бүх эрх хуулиар хамгаалагдсан.  │
 │                                                        │
 │  Үйлчилгээний нөхцөл | Нууцлалын бодлого | Күүкис     │
 └────────────────────────────────────────────────────────┘
@@ -229,7 +229,7 @@ All Mongolian characters display correctly:
 
 ### Contact Email
 - **Old**: info@store.mn
-- **New**: info@ayangastore.mn
+- **New**: info@Techstore.mn
 - **Reason**: Matches brand name
 
 ---
@@ -237,9 +237,9 @@ All Mongolian characters display correctly:
 ## Consistency
 
 ### Brand Name Usage
-- Header: "Ayanga Store" (logo)
-- Footer: "Ayanga Store" (copyright)
-- Email: "ayangastore.mn"
+- Header: "Tech Store" (logo)
+- Footer: "Tech Store" (copyright)
+- Email: "Techstore.mn"
 - ✅ Consistent throughout
 
 ---
@@ -271,8 +271,8 @@ All Mongolian characters display correctly:
 ✅ **Footer**: Fully translated to Mongolian
 ✅ **Header**: Account button translated
 ✅ **All sections**: Working correctly
-✅ **Email**: Updated to ayangastore.mn
-✅ **Copyright**: Shows Ayanga Store
+✅ **Email**: Updated to Techstore.mn
+✅ **Copyright**: Shows Tech Store
 ✅ **Links**: All translated
 ✅ **Forms**: Placeholders translated
 ✅ **Buttons**: All in Mongolian
@@ -286,7 +286,7 @@ All Mongolian characters display correctly:
 **Components**: Footer + Header
 **Encoding**: UTF-8 Cyrillic
 
-Your Ayanga Store footer and header are now fully in Mongolian! 🇲🇳
+Your Tech Store footer and header are now fully in Mongolian! 🇲🇳
 
 **Test it:** Scroll to bottom of http://localhost:3000
 

@@ -41,8 +41,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:info@ayangastore.mn" className="text-sm text-neutral-600 dark:text-neutral-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
-                  info@ayangastore.mn
+                <a href="mailto:info@Techstore.mn" className="text-sm text-neutral-600 dark:text-neutral-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
+                  info@Techstore.mn
                 </a>
               </li>
               <li>
@@ -100,7 +100,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-neutral-200 dark:border-neutral-800 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-neutral-600 dark:text-neutral-400">
-            © 2025 Ayanga Store. Бүх эрх хуулиар хамгаалагдсан.
+            © 2025 Tech Store. Бүх эрх хуулиар хамгаалагдсан.
           </p>
           <div className="flex items-center gap-6">
             <Link href="/terms" className="text-sm text-neutral-600 dark:text-neutral-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">

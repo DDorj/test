@@ -231,7 +231,7 @@ Category: Ухаалаг утас
 ### Meta Tags:
 Consider adding:
 ```typescript
-title: 'Ayanga Store - Монголын шилдэг техник хэрэгслийн дэлгүүр'
+title: 'Tech Store - Монголын шилдэг техник хэрэгслийн дэлгүүр'
 description: 'Ухаалаг утас, таблет, зөөврийн компьютер...'
 ```
 
