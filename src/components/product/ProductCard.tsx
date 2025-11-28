@@ -60,16 +60,18 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
       </button>
 
       {/* Image */}
-      <Link href={`/product/${product.slug}`} className="relative">
-        <div className="aspect-square bg-neutral-50 dark:bg-neutral-800 relative overflow-hidden">
-          <Image
-            src={product.images[0]}
-            alt={product.name}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-            className="object-contain p-6 group-hover:scale-105 transition-transform duration-300"
-            priority={priority}
-          />
+      <Link href={`/product/${product.slug}`} className="relative block">
+        <div className="aspect-square bg-neutral-50 dark:bg-neutral-800 relative overflow-hidden p-4">
+          <div className="relative w-full h-full">
+            <Image
+              src={product.images[0]}
+              alt={product.name}
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              className="object-contain group-hover:scale-105 transition-transform duration-300"
+              priority={priority}
+            />
+          </div>
         </div>
       </Link>
 
