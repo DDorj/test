@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { sampleProducts, categories, brands } from '@/lib/data'
+import { sampleProducts, categories } from '@/lib/data'
 import ProductGrid from '@/components/organisms/ProductGrid'
 import Button from '@/components/atoms/Button'
 import { ChevronRightIcon, TruckIcon, CheckBadgeIcon, ShieldCheckIcon } from '@heroicons/react/24/outline'
@@ -34,17 +34,17 @@ export default function HomePage() {
               iPhone 15 Pro Max
             </h1>
             <p className="text-h3 mb-4">
-              Get 30% OFF this week only
+              Энэ долоо хоногт 30% хөнгөлөлттэй
             </p>
             <p className="text-body-lg mb-8 text-white/90">
-              The ultimate iPhone with titanium design, A17 Pro chip, and advanced camera system
+              Титан загвар, A17 Pro чип, дэвшилтэт камер системтэй хамгийн шилдэг iPhone
             </p>
             <div className="flex gap-4">
               <Button size="lg" className="bg-white text-primary-600 hover:bg-neutral-100">
-                Shop Now
+                Худалдаж авах
               </Button>
               <Button size="lg" variant="secondary" className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20">
-                Learn More
+                Дэлгэрэнгүй
               </Button>
             </div>
           </div>
@@ -54,7 +54,7 @@ export default function HomePage() {
       {/* Quick Categories */}
       <section className="container py-12">
         <h2 className="text-h2 font-bold text-neutral-900 dark:text-dark-text-primary mb-6">
-          Shop by Category
+          Ангилалаар хайх
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {categories.map((category) => (
@@ -74,7 +74,7 @@ export default function HomePage() {
                 {category.name}
               </h3>
               <p className="text-body-sm text-center text-neutral-500 dark:text-dark-text-muted mt-1">
-                {category.productCount} items
+                {category.productCount} бүтээгдэхүүн
               </p>
             </Link>
           ))}
@@ -90,7 +90,7 @@ export default function HomePage() {
           </h2>
           <Link href="/category/all">
             <Button variant="ghost" className="gap-2">
-              View All
+              Бүгдийг үзэх
               <ChevronRightIcon className="w-4 h-4" />
             </Button>
           </Link>
@@ -108,7 +108,7 @@ export default function HomePage() {
             </h2>
             <Link href="/category/sale">
               <Button variant="ghost" className="gap-2">
-                View All
+                Бүгдийг үзэх
                 <ChevronRightIcon className="w-4 h-4" />
               </Button>
             </Link>
@@ -122,12 +122,12 @@ export default function HomePage() {
         <div className="bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-primary-900/20 dark:to-secondary-900/20 border border-primary-200 dark:border-primary-800 rounded-2xl p-8 lg:p-12">
           <div className="max-w-3xl">
             <h2 className="text-h2 font-bold text-neutral-900 dark:text-dark-text-primary mb-4">
-              💳 Get your dream device with 0% installment
+              💳 Хүссэн төхөөрөмжөө 0% хүүгийн лизингээр авах
             </h2>
             <p className="text-body-lg text-neutral-600 dark:text-dark-text-secondary mb-6">
-              Up to 36 months • No interest • Fast approval
+              36 сар хүртэл • Хүүгүй • Хурдан баталгаажуулалт
             </p>
-            <Button>Calculate Now</Button>
+            <Button>Тооцоолох</Button>
           </div>
         </div>
       </section>
@@ -138,11 +138,11 @@ export default function HomePage() {
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-h2 font-bold text-neutral-900 dark:text-dark-text-primary flex items-center gap-2">
               <span>🆕</span>
-              New Arrivals
+              Шинэ бүтээгдэхүүн
             </h2>
             <Link href="/category/new">
               <Button variant="ghost" className="gap-2">
-                View All
+                Бүгдийг үзэх
                 <ChevronRightIcon className="w-4 h-4" />
               </Button>
             </Link>
@@ -152,24 +152,24 @@ export default function HomePage() {
       )}
 
       {/* Brands */}
-      <section className="container py-12">
-        <h2 className="text-h2 font-bold text-neutral-900 dark:text-dark-text-primary mb-6">
-          Shop by Brand
-        </h2>
-        <div className="grid grid-cols-3 md:grid-cols-5 gap-4">
-          {brands.map((brand) => (
-            <Link
-              key={brand.id}
-              href={`/brand/${brand.slug}`}
-              className="p-8 bg-white dark:bg-dark-bg-secondary border border-neutral-200 dark:border-dark-border-default rounded-xl hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex items-center justify-center"
-            >
-              <span className="text-h4 font-bold text-neutral-900 dark:text-dark-text-primary">
-                {brand.name}
-              </span>
-            </Link>
-          ))}
-        </div>
-      </section>
+      {/*<section className="container py-12">*/}
+      {/*  <h2 className="text-h2 font-bold text-neutral-900 dark:text-dark-text-primary mb-6">*/}
+      {/*    Shop by Brand*/}
+      {/*  </h2>*/}
+      {/*  <div className="grid grid-cols-3 md:grid-cols-5 gap-4">*/}
+      {/*    {brands.map((brand) => (*/}
+      {/*      <Link*/}
+      {/*        key={brand.id}*/}
+      {/*        href={`/brand/${brand.slug}`}*/}
+      {/*        className="p-8 bg-white dark:bg-dark-bg-secondary border border-neutral-200 dark:border-dark-border-default rounded-xl hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex items-center justify-center"*/}
+      {/*      >*/}
+      {/*        <span className="text-h4 font-bold text-neutral-900 dark:text-dark-text-primary">*/}
+      {/*          {brand.name}*/}
+      {/*        </span>*/}
+      {/*      </Link>*/}
+      {/*    ))}*/}
+      {/*  </div>*/}
+      {/*</section>*/}
 
       {/* Trust Badges */}
       <section className="container py-12">
@@ -177,30 +177,30 @@ export default function HomePage() {
           <div className="p-6 bg-white dark:bg-dark-bg-secondary border border-neutral-200 dark:border-dark-border-default rounded-xl text-center">
             <TruckIcon className="w-12 h-12 mx-auto mb-4 text-primary-600 dark:text-primary-400" />
             <h3 className="text-h5 font-semibold text-neutral-900 dark:text-dark-text-primary mb-2">
-              Free Delivery
+              Үнэгүй хүргэлт
             </h3>
             <p className="text-body-sm text-neutral-600 dark:text-dark-text-secondary">
-              On all orders nationwide
+              Улаанбаатар хот даяар
             </p>
           </div>
 
           <div className="p-6 bg-white dark:bg-dark-bg-secondary border border-neutral-200 dark:border-dark-border-default rounded-xl text-center">
             <CheckBadgeIcon className="w-12 h-12 mx-auto mb-4 text-success-600 dark:text-success-400" />
             <h3 className="text-h5 font-semibold text-neutral-900 dark:text-dark-text-primary mb-2">
-              100% Genuine
+              100% Оригнал
             </h3>
             <p className="text-body-sm text-neutral-600 dark:text-dark-text-secondary">
-              All products are authentic
+              Бүх бүтээгдэхүүн баталгаатай
             </p>
           </div>
 
           <div className="p-6 bg-white dark:bg-dark-bg-secondary border border-neutral-200 dark:border-dark-border-default rounded-xl text-center">
             <ShieldCheckIcon className="w-12 h-12 mx-auto mb-4 text-primary-600 dark:text-primary-400" />
             <h3 className="text-h5 font-semibold text-neutral-900 dark:text-dark-text-primary mb-2">
-              Secure Payment
+              Найдвартай төлбөр
             </h3>
             <p className="text-body-sm text-neutral-600 dark:text-dark-text-secondary">
-              SSL encrypted transactions
+              SSL шифрлэлттэй
             </p>
           </div>
         </div>

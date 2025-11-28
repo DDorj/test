@@ -8,55 +8,55 @@ export default function Footer() {
           {/* About */}
           <div>
             <h3 className="text-h5 font-semibold text-neutral-900 dark:text-dark-text-primary mb-4">
-              About Us
+              Бидний тухай
             </h3>
             <ul className="space-y-2 text-body-sm text-neutral-600 dark:text-dark-text-secondary">
-              <li><Link href="/about" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Our Story</Link></li>
-              <li><Link href="/branches" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Our Branches</Link></li>
-              <li><Link href="/careers" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Careers</Link></li>
+              <li><Link href="/about" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Бидний түүх</Link></li>
+              <li><Link href="/branches" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Салбарууд</Link></li>
+              <li><Link href="/careers" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Ажлын байр</Link></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
             <h3 className="text-h5 font-semibold text-neutral-900 dark:text-dark-text-primary mb-4">
-              Contact Us
+              Холбоо барих
             </h3>
             <ul className="space-y-2 text-body-sm text-neutral-600 dark:text-dark-text-secondary">
               <li><a href="tel:+97670111111" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">7011-1111</a></li>
-              <li><a href="mailto:info@store.mn" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">info@store.mn</a></li>
-              <li><Link href="/contact" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Contact Form</Link></li>
+              <li><a href="mailto:info@ayangastore.mn" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">info@ayangastore.mn</a></li>
+              <li><Link href="/contact" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Холбоо барих хэсэг</Link></li>
             </ul>
           </div>
 
           {/* Policies */}
           <div>
             <h3 className="text-h5 font-semibold text-neutral-900 dark:text-dark-text-primary mb-4">
-              Customer Service
+              Үйлчилгээ
             </h3>
             <ul className="space-y-2 text-body-sm text-neutral-600 dark:text-dark-text-secondary">
-              <li><Link href="/warranty" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Warranty Policy</Link></li>
-              <li><Link href="/returns" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Returns & Refunds</Link></li>
-              <li><Link href="/delivery" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Delivery Info</Link></li>
+              <li><Link href="/warranty" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Баталгааны бодлого</Link></li>
+              <li><Link href="/returns" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Буцаалт, буцаан олголт</Link></li>
+              <li><Link href="/delivery" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Хүргэлтийн мэдээлэл</Link></li>
             </ul>
           </div>
 
           {/* Newsletter */}
           <div>
             <h3 className="text-h5 font-semibold text-neutral-900 dark:text-dark-text-primary mb-4">
-              Newsletter
+              Мэдээ авах
             </h3>
             <p className="text-body-sm text-neutral-600 dark:text-dark-text-secondary mb-4">
-              Subscribe to get special offers and updates
+              Онцгой санал болон шинэ мэдээлэл авахын тулд бүртгүүлэх
             </p>
             <div className="flex gap-2">
               <input
                 type="email"
-                placeholder="Your email"
+                placeholder="Таны имэйл"
                 className="flex-1 px-4 py-2 text-body-sm bg-neutral-50 dark:bg-dark-bg-primary border border-neutral-300 dark:border-dark-border-default rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
               />
               <button className="px-4 py-2 bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 text-white font-medium text-body-sm rounded-lg transition-colors">
-                Subscribe
+                Бүртгүүлэх
               </button>
             </div>
           </div>
@@ -64,17 +64,17 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-neutral-200 dark:border-dark-border-default flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-body-sm text-neutral-600 dark:text-dark-text-secondary">
-            © 2025 Tech Store. All rights reserved.
+            © 2025 Ayanga Store. Бүх эрх хуулиар хамгаалагдсан.
           </p>
           <div className="flex items-center gap-6">
             <Link href="/terms" className="text-body-sm text-neutral-600 dark:text-dark-text-secondary hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-              Terms
+              Үйлчилгээний нөхцөл
             </Link>
             <Link href="/privacy" className="text-body-sm text-neutral-600 dark:text-dark-text-secondary hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-              Privacy
+              Нууцлалын бодлого
             </Link>
             <Link href="/cookies" className="text-body-sm text-neutral-600 dark:text-dark-text-secondary hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-              Cookies
+              Күүкис
             </Link>
           </div>
         </div>

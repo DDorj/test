@@ -5,7 +5,7 @@ export const sampleProducts: Product[] = [
     id: '1',
     slug: 'iphone-15-pro-max',
     name: 'Apple iPhone 15 Pro Max 256GB',
-    description: '6.7-inch Super Retina XDR display with ProMotion, A17 Pro chip, Advanced camera system',
+    description: '6.7 инч Super Retina XDR дэлгэц ProMotion-тай, A17 Pro чип, Дэвшилтэт камер систем',
     price: 4499000,
     compareAtPrice: 6499000,
     images: [
@@ -25,7 +25,7 @@ export const sampleProducts: Product[] = [
     id: '2',
     slug: 'samsung-galaxy-s24-ultra',
     name: 'Samsung Galaxy S24 Ultra',
-    description: 'Galaxy AI, 200MP camera, S Pen, Snapdragon 8 Gen 3',
+    description: 'Galaxy AI хиймэл оюун ухаан, 200MP камер, S Pen үзэг, Snapdragon 8 Gen 3 процессор',
     price: 3299000,
     images: ['https://placehold.co/600x600/c026d3/white?text=Galaxy+S24'],
     category: 'smartphones',
@@ -40,7 +40,7 @@ export const sampleProducts: Product[] = [
     id: '3',
     slug: 'xiaomi-14-pro',
     name: 'Xiaomi 14 Pro 512GB',
-    description: 'Snapdragon 8 Gen 3, Leica camera, 120W HyperCharge',
+    description: 'Snapdragon 8 Gen 3 процессор, Leica камер, 120W хурдан цэнэглэгч',
     price: 1899000,
     images: ['https://placehold.co/600x600/22c55e/white?text=Xiaomi+14'],
     category: 'smartphones',
@@ -54,7 +54,7 @@ export const sampleProducts: Product[] = [
     id: '4',
     slug: 'macbook-air-m2',
     name: 'MacBook Air 13" M2 256GB',
-    description: 'Apple M2 chip, 13.6" Liquid Retina display, Up to 18 hours battery',
+    description: 'Apple M2 чип, 13.6 инч Liquid Retina дэлгэц, 18 цаг хүртэл батарей',
     price: 5299000,
     compareAtPrice: 6499000,
     images: ['https://placehold.co/600x600/0ea5e9/white?text=MacBook+Air'],
@@ -68,8 +68,8 @@ export const sampleProducts: Product[] = [
   {
     id: '5',
     slug: 'airpods-pro-2',
-    name: 'AirPods Pro 2nd Generation',
-    description: 'Active Noise Cancellation, Adaptive Transparency, Spatial Audio',
+    name: 'AirPods Pro 2 дугаар үе',
+    description: 'Идэвхтэй дуу намсгах, Дасан зохицох ил тод байдал, Орон зайн аудио',
     price: 399000,
     images: ['https://placehold.co/600x600/0ea5e9/white?text=AirPods+Pro'],
     category: 'accessories',
@@ -82,7 +82,7 @@ export const sampleProducts: Product[] = [
     id: '6',
     slug: 'ipad-pro-11',
     name: 'iPad Pro 11" M2 128GB',
-    description: 'Apple M2 chip, 11" Liquid Retina display, Apple Pencil support',
+    description: 'Apple M2 чип, 11 инч Liquid Retina дэлгэц, Apple Pencil дэмжлэг',
     price: 2999000,
     images: ['https://placehold.co/600x600/0ea5e9/white?text=iPad+Pro'],
     category: 'tablets',
@@ -95,8 +95,8 @@ export const sampleProducts: Product[] = [
   {
     id: '7',
     slug: 'apple-watch-series-9',
-    name: 'Apple Watch Series 9 GPS 45mm',
-    description: 'Always-On Retina display, S9 chip, Double Tap gesture',
+    name: 'Apple Watch Series 9 GPS 45мм',
+    description: 'Байнга асаалттай Retina дэлгэц, S9 чип, Давхар товшилтын жестүр',
     price: 1299000,
     images: ['https://placehold.co/600x600/0ea5e9/white?text=Apple+Watch'],
     category: 'watches',
@@ -108,8 +108,8 @@ export const sampleProducts: Product[] = [
   {
     id: '8',
     slug: 'lenovo-thinkpad-x1',
-    name: 'Lenovo ThinkPad X1 Carbon Gen 11',
-    description: 'Intel Core i7, 16GB RAM, 512GB SSD, 14" WUXGA display',
+    name: 'Lenovo ThinkPad X1 Carbon 11 дүгээр үе',
+    description: 'Intel Core i7 процессор, 16GB RAM санах ой, 512GB SSD, 14" WUXGA дэлгэц',
     price: 4599000,
     images: ['https://placehold.co/600x600/737373/white?text=ThinkPad'],
     category: 'laptops',
@@ -121,11 +121,11 @@ export const sampleProducts: Product[] = [
 ]
 
 export const categories = [
-  { id: '1', slug: 'smartphones', name: 'Smartphones', productCount: 120 },
-  { id: '2', slug: 'tablets', name: 'Tablets', productCount: 45 },
-  { id: '3', slug: 'laptops', name: 'Laptops', productCount: 78 },
-  { id: '4', slug: 'watches', name: 'Watches', productCount: 32 },
-  { id: '5', slug: 'accessories', name: 'Accessories', productCount: 200 },
+  { id: '1', slug: 'smartphones', name: 'Ухаалаг утас', productCount: 120 },
+  { id: '2', slug: 'tablets', name: 'Таблет', productCount: 45 },
+  { id: '3', slug: 'laptops', name: 'Зөөврийн компьютер', productCount: 78 },
+  { id: '4', slug: 'watches', name: 'Ухаалаг цаг', productCount: 32 },
+  { id: '5', slug: 'accessories', name: 'Дагалдах хэрэгсэл', productCount: 200 },
 ]
 
 export const brands = [

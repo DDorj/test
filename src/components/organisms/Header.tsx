@@ -37,9 +37,15 @@ export default function Header() {
     }
   }, [])
 
-  const categories = ['Smartphones', 'Tablets', 'Laptops', 'Watches', 'Accessories', 'Sale']
+    const categories = [
+        { id: '1', slug: 'smartphones', name: 'Ухаалаг утас', productCount: 120 },
+        { id: '2', slug: 'tablets', name: 'Таблет', productCount: 45 },
+        { id: '3', slug: 'laptops', name: 'Зөөврийн компьютер', productCount: 78 },
+        { id: '4', slug: 'watches', name: 'Ухаалаг цаг', productCount: 32 },
+        { id: '5', slug: 'accessories', name: 'Дагалдах хэрэгсэл', productCount: 200 },
+    ]
 
-  return (
+    return (
     <header className="sticky top-0 z-50 bg-white/95 dark:bg-dark-bg-secondary/95 backdrop-blur-md border-b border-neutral-200 dark:border-dark-border-default">
 
       {/* Main Navigation */}
@@ -104,12 +110,12 @@ export default function Header() {
 
             {/* Account */}
             <button
-              onClick={() => alert('Account page coming soon!')}
+              onClick={() => alert('Хэрэглэгчийн хуудас удахгүй!')}
               className="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-dark-bg-tertiary transition-colors"
             >
               <UserCircleIcon className="w-6 h-6 text-neutral-700 dark:text-dark-text-primary" />
               <span className="text-body font-medium text-neutral-700 dark:text-dark-text-primary">
-                Account
+                Нэвтрэх
               </span>
             </button>
 
@@ -124,11 +130,11 @@ export default function Header() {
         <nav className="hidden lg:flex items-center gap-1 mt-4 border-t border-neutral-200 dark:border-dark-border-default pt-4">
           {categories.map((category) => (
             <Link
-              key={category}
-              href={`/category/${category.toLowerCase()}`}
+              key={category.id}
+              href={`/category/${category.slug.toLowerCase()}`}
               className="px-4 py-2 text-body font-medium text-neutral-700 dark:text-dark-text-primary hover:text-primary-600 dark:hover:text-primary-400 hover:bg-neutral-100 dark:hover:bg-dark-bg-tertiary rounded-lg transition-colors"
             >
-              {category}
+              {category.name}
             </Link>
           ))}
         </nav>
