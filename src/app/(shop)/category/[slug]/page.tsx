@@ -55,8 +55,8 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
     <div className="container py-8">
       <Breadcrumb
         items={[
-          { label: 'Home', href: '/' },
-          { label: 'Category', href: '/category' },
+          { label: 'Нүүр', href: '/' },
+          { label: 'Ангилал', href: '/category' },
           { label: slug },
         ]}
       />
@@ -64,7 +64,7 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
       <div className="mt-6 mb-8">
         <h1 className="text-h1 font-bold mb-2 capitalize">{slug}</h1>
         <p className="text-body text-neutral-600 dark:text-dark-text-secondary">
-          {categoryProducts.length} products found
+          {categoryProducts.length} бүтээгдэхүүн олдлоо
         </p>
       </div>
 
@@ -74,20 +74,20 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
           <div className="bg-white dark:bg-dark-bg-secondary border border-neutral-200 dark:border-dark-border-default rounded-xl p-6 space-y-6 sticky top-24">
             <div className="flex items-center justify-between">
               <h3 className="text-h4 font-semibold text-neutral-900 dark:text-dark-text-primary">
-                Filters
+                Шүүлтүүр
               </h3>
               <button 
                 onClick={clearFilters}
                 className="text-body-sm font-medium text-primary-600 dark:text-primary-400 hover:underline"
               >
-                Clear All
+                Бүгдийг арилгах
               </button>
             </div>
 
             {/* Price Range */}
             <div>
               <h4 className="text-label font-semibold text-neutral-900 dark:text-dark-text-primary mb-3">
-                Price Range
+                Үнийн хязгаар
               </h4>
               <div className="space-y-4">
                 <input
@@ -102,7 +102,7 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
                 <div className="space-y-3">
                   <div>
                     <label className="block text-body-sm text-neutral-600 dark:text-dark-text-secondary mb-1.5">
-                      Minimum
+                      Доод
                     </label>
                     <input
                       type="number"
@@ -114,7 +114,7 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
                   </div>
                   <div>
                     <label className="block text-body-sm text-neutral-600 dark:text-dark-text-secondary mb-1.5">
-                      Maximum
+                      Дээд
                     </label>
                     <input
                       type="number"
@@ -131,7 +131,7 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
             {/* Stock Status */}
             <div>
               <h4 className="text-label font-semibold text-neutral-900 dark:text-dark-text-primary mb-3">
-                Availability
+                Нөөцийн байдал
               </h4>
               <div className="space-y-2">
                 <label className="flex items-center gap-3 cursor-pointer group">
@@ -142,7 +142,7 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
                     className="w-5 h-5 text-primary-600 rounded border-neutral-300 dark:border-dark-border-default focus:ring-2 focus:ring-primary-500"
                   />
                   <span className="text-body text-neutral-700 dark:text-dark-text-primary group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-                    In Stock Only
+                    Нөөцөд байгаа
                   </span>
                 </label>
                 <label className="flex items-center gap-3 cursor-pointer group">
@@ -153,7 +153,7 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
                     className="w-5 h-5 text-primary-600 rounded border-neutral-300 dark:border-dark-border-default focus:ring-2 focus:ring-primary-500"
                   />
                   <span className="text-body text-neutral-700 dark:text-dark-text-primary group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-                    On Sale
+                    Хямдралтай
                   </span>
                 </label>
               </div>
@@ -175,7 +175,7 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
               <div className="p-6 space-y-6">
                 <div className="flex items-center justify-between">
                   <h3 className="text-h4 font-semibold text-neutral-900 dark:text-dark-text-primary">
-                    Filters
+                    Шүүлтүүр
                   </h3>
                   <button 
                     onClick={() => setShowFilters(false)}
@@ -188,7 +188,7 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
                 {/* Price Range - Mobile */}
                 <div>
                   <h4 className="text-label font-semibold text-neutral-900 dark:text-dark-text-primary mb-3">
-                    Price Range
+                    Үнийн хязгаар
                   </h4>
                   <div className="space-y-4">
                     <input
@@ -203,7 +203,7 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
                     <div className="space-y-3">
                       <div>
                         <label className="block text-body-sm text-neutral-600 dark:text-dark-text-secondary mb-1.5">
-                          Minimum Price
+                          Доод үнэ
                         </label>
                         <input
                           type="number"
@@ -215,7 +215,7 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
                       </div>
                       <div>
                         <label className="block text-body-sm text-neutral-600 dark:text-dark-text-secondary mb-1.5">
-                          Maximum Price
+                          Дээд үнэ
                         </label>
                         <input
                           type="number"
@@ -232,7 +232,7 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
                 {/* Stock Status - Mobile */}
                 <div>
                   <h4 className="text-label font-semibold text-neutral-900 dark:text-dark-text-primary mb-3">
-                    Availability
+                    Нөөцийн байдал
                   </h4>
                   <div className="space-y-2">
                     <label className="flex items-center gap-3 cursor-pointer group">
@@ -243,7 +243,7 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
                         className="w-5 h-5 text-primary-600 rounded border-neutral-300 dark:border-dark-border-default focus:ring-2 focus:ring-primary-500"
                       />
                       <span className="text-body text-neutral-700 dark:text-dark-text-primary group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-                        In Stock Only
+                        Нөөцөд байгаа
                       </span>
                     </label>
                     <label className="flex items-center gap-3 cursor-pointer group">
@@ -254,7 +254,7 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
                         className="w-5 h-5 text-primary-600 rounded border-neutral-300 dark:border-dark-border-default focus:ring-2 focus:ring-primary-500"
                       />
                       <span className="text-body text-neutral-700 dark:text-dark-text-primary group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-                        On Sale
+                        Хямдралтай
                       </span>
                     </label>
                   </div>
@@ -266,13 +266,13 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
                     onClick={clearFilters}
                     className="flex-1 px-4 py-3 bg-neutral-100 hover:bg-neutral-200 dark:bg-dark-bg-tertiary dark:hover:bg-dark-bg-elevated text-neutral-900 dark:text-dark-text-primary font-medium rounded-lg transition-colors"
                   >
-                    Clear All
+                    Арилгах
                   </button>
                   <button
                     onClick={() => setShowFilters(false)}
                     className="flex-1 px-4 py-3 bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 text-white font-medium rounded-lg transition-colors"
                   >
-                    Apply Filters
+                    Хэрэглэх
                   </button>
                 </div>
               </div>
@@ -290,7 +290,7 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
               className="lg:hidden flex items-center gap-2 px-4 py-2 bg-white dark:bg-dark-bg-secondary border border-neutral-300 dark:border-dark-border-default rounded-lg hover:bg-neutral-50 dark:hover:bg-dark-bg-tertiary transition-colors"
             >
               <AdjustmentsHorizontalIcon className="w-5 h-5" />
-              <span className="text-body font-medium">Filters</span>
+              <span className="text-body font-medium">Шүүлтүүр</span>
               {(inStockOnly || onSaleOnly || priceRange[0] > 0 || priceRange[1] < 10000000) && (
                 <span className="ml-1 px-2 py-0.5 bg-primary-600 text-white text-xs font-bold rounded-full">
                   •
@@ -305,11 +305,11 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
                 onChange={(e) => setSortBy(e.target.value)}
                 className="px-4 py-2 bg-white dark:bg-dark-bg-secondary border border-neutral-300 dark:border-dark-border-default rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 text-body"
               >
-                <option value="best-selling">Sort: Best Selling</option>
-                <option value="newest">Sort: Newest</option>
-                <option value="price-low">Sort: Price: Low to High</option>
-                <option value="price-high">Sort: Price: High to Low</option>
-                <option value="rating">Sort: Rating</option>
+                <option value="best-selling">Эрэлттэй</option>
+                <option value="newest">Шинэ</option>
+                <option value="price-low">Үнэ: Багаас их</option>
+                <option value="price-high">Үнэ: Ихээс бага</option>
+                <option value="rating">Үнэлгээ</option>
               </select>
             </div>
           </div>

@@ -22,13 +22,13 @@ export default function CartPage() {
             <span className="text-5xl">🛒</span>
           </div>
           <h1 className="text-h2 font-bold text-neutral-900 dark:text-dark-text-primary mb-4">
-            Your cart is empty
+            Таны сагс хоосон байна
           </h1>
           <p className="text-body text-neutral-600 dark:text-dark-text-secondary mb-8">
-            Start shopping and add products to your cart
+            Хэрэгцээтэй бүтээгдэхүүнүүдээ сагсалж эхлээрэй
           </p>
           <Link href="/">
-            <Button size="lg">Browse Products</Button>
+            <Button size="lg">Бүтээгдэхүүн үзэх</Button>
           </Link>
         </div>
       </div>
@@ -38,7 +38,7 @@ export default function CartPage() {
   return (
     <div className="container py-8">
       <h1 className="text-h1 font-bold text-neutral-900 dark:text-dark-text-primary mb-8">
-        Shopping Cart
+        Миний сагс
       </h1>
 
       <div className="lg:grid lg:grid-cols-[1fr_400px] lg:gap-8">
@@ -46,13 +46,13 @@ export default function CartPage() {
         <div className="space-y-4">
           <div className="flex items-center justify-between mb-4">
             <p className="text-body text-neutral-600 dark:text-dark-text-secondary">
-              {items.length} {items.length === 1 ? 'item' : 'items'} in cart
+              Нийт {items.length} бүтээгдэхүүн
             </p>
             <button
               onClick={clearCart}
               className="text-body-sm text-error-600 dark:text-error-500 hover:underline"
             >
-              Clear All
+              Бүгдийг устгах
             </button>
           </div>
 
@@ -98,7 +98,7 @@ export default function CartPage() {
                     </p>
                     {item.quantity > 1 && (
                       <p className="text-body-xs text-neutral-500 dark:text-dark-text-muted">
-                        {formatPrice(item.price)} each
+                        {formatPrice(item.price)} нэгж үнэ
                       </p>
                     )}
                   </div>
@@ -117,7 +117,7 @@ export default function CartPage() {
 
           <Link href="/">
             <Button variant="ghost" className="mt-4">
-              ← Continue Shopping
+              ← Үргэлжлүүлэн худалдаж авах
             </Button>
           </Link>
         </div>
@@ -126,39 +126,39 @@ export default function CartPage() {
         <div className="mt-8 lg:mt-0">
           <div className="bg-white dark:bg-dark-bg-secondary border border-neutral-200 dark:border-dark-border-default rounded-xl p-6 sticky top-24">
             <h2 className="text-h4 font-semibold text-neutral-900 dark:text-dark-text-primary mb-6">
-              Order Summary
+              Захиалгын дүн
             </h2>
 
             {/* Promo Code */}
             <div className="mb-6">
               <label className="block text-label-sm font-medium text-neutral-900 dark:text-dark-text-primary mb-2">
-                Promo Code
+                Урамшууллын код
               </label>
               <div className="flex gap-2">
                 <input
                   type="text"
-                  placeholder="Enter code"
+                  placeholder="Код оруулах"
                   className="flex-1 px-4 py-2.5 text-body bg-neutral-50 dark:bg-dark-bg-primary border border-neutral-300 dark:border-dark-border-default rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
                 />
-                <Button variant="secondary">Apply</Button>
+                <Button variant="secondary">Хэрэглэх</Button>
               </div>
             </div>
 
             <div className="space-y-3 mb-6">
               <div className="flex items-center justify-between text-body">
-                <span className="text-neutral-600 dark:text-dark-text-secondary">Subtotal</span>
+                <span className="text-neutral-600 dark:text-dark-text-secondary">Нийт дүн</span>
                 <span className="font-medium text-neutral-900 dark:text-dark-text-primary">
                   {formatPrice(subtotal)}
                 </span>
               </div>
               <div className="flex items-center justify-between text-body">
-                <span className="text-neutral-600 dark:text-dark-text-secondary">Shipping</span>
-                <span className="font-medium text-success-600 dark:text-success-500">Free</span>
+                <span className="text-neutral-600 dark:text-dark-text-secondary">Хүргэлт</span>
+                <span className="font-medium text-success-600 dark:text-success-500">Үнэгүй</span>
               </div>
               <div className="pt-3 border-t border-neutral-200 dark:border-dark-border-default">
                 <div className="flex items-center justify-between">
                   <span className="text-h4 font-semibold text-neutral-900 dark:text-dark-text-primary">
-                    Total
+                    Нийт төлөх
                   </span>
                   <span className="text-h3 font-bold text-neutral-900 dark:text-dark-text-primary">
                     {formatPrice(totalAmount)}
@@ -170,19 +170,19 @@ export default function CartPage() {
             {/* Installment Info */}
             <div className="mb-6 p-3 bg-primary-50 dark:bg-primary-900/20 rounded-lg">
               <p className="text-body-sm text-neutral-600 dark:text-dark-text-secondary">
-                💳 Installment Available
+                💳 Лизингээр авах боломжтой
               </p>
               <p className="text-body-sm font-medium text-primary-600 dark:text-primary-400 mt-1">
-                From {formatPrice(Math.floor(totalAmount / 24))}/month
+                Сард {formatPrice(Math.floor(totalAmount / 24))}-с эхлэн
               </p>
             </div>
 
-            <Button size="lg" className="w-full mb-3" onClick={() => alert('Checkout page coming soon!')}>
-              Proceed to Checkout
+            <Button size="lg" className="w-full mb-3" onClick={() => alert('Төлбөр төлөх хуудас удахгүй!')}>
+              Төлбөр төлөх
             </Button>
 
             <button className="w-full text-body-sm text-neutral-600 dark:text-dark-text-secondary hover:text-neutral-900 dark:hover:text-dark-text-primary transition-colors">
-              Continue Shopping
+              Үргэлжлүүлэн худалдаж авах
             </button>
           </div>
         </div>

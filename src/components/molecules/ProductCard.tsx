@@ -42,7 +42,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           <Badge variant="discount">-{discount}%</Badge>
         )}
         {product.isNew && (
-          <Badge variant="new">NEW</Badge>
+          <Badge variant="new">ШИНЭ</Badge>
         )}
       </div>
 
@@ -94,12 +94,12 @@ export default function ProductCard({ product }: ProductCardProps) {
         {product.stock > 0 ? (
           <div className="flex items-center gap-1.5 text-body-sm text-success-600 dark:text-success-500">
             <div className="w-2 h-2 rounded-full bg-success-500" />
-            In Stock
+            Нөөцөд байгаа
           </div>
         ) : (
           <div className="flex items-center gap-1.5 text-body-sm text-error-600 dark:text-error-500">
             <div className="w-2 h-2 rounded-full bg-error-500" />
-            Out of Stock
+            Дууссан
           </div>
         )}
 
@@ -111,7 +111,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             onClick={handleAddToCart}
             disabled={product.stock === 0}
           >
-            Add to Cart
+            Сагслах
           </Button>
           <Link href={`/product/${product.slug}`}>
             <button className="w-10 h-10 flex items-center justify-center bg-neutral-100 hover:bg-neutral-200 dark:bg-dark-bg-tertiary dark:hover:bg-dark-bg-elevated text-neutral-700 dark:text-dark-text-primary rounded-lg transition-colors duration-150">

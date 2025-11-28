@@ -37,7 +37,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
   }, [product])
 
   if (!product) {
-    return <div className="container py-20 text-center">Product not found</div>
+    return <div className="container py-20 text-center">Бүтээгдэхүүн олдсонгүй</div>
   }
 
   const relatedProducts = sampleProducts.filter(p => p.category === product.category && p.id !== product.id).slice(0, 4)
@@ -62,7 +62,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
     <div className="container py-8">
       <Breadcrumb
         items={[
-          { label: 'Home', href: '/' },
+          { label: 'Нүүр', href: '/' },
           { label: product.category, href: `/category/${product.category}` },
           { label: product.name },
         ]}
@@ -130,21 +130,21 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
           <div className="mt-6 p-4 bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-primary-900/20 dark:to-secondary-900/20 border border-primary-200 dark:border-primary-800 rounded-xl">
             <div className="flex items-center gap-2 mb-2">
               <span className="text-label font-semibold text-neutral-900 dark:text-dark-text-primary">
-                💳 Installment Available
+                💳 Лизингээр авах боломжтой
               </span>
             </div>
             <p className="text-body-sm text-neutral-600 dark:text-dark-text-secondary mb-3">
-              Pay as low as <span className="font-bold text-primary-600 dark:text-primary-400">₮187,458/month</span> for 24 months
+              Сард <span className="font-bold text-primary-600 dark:text-primary-400">₮187,458</span> төлөлтөөр 24 сар
             </p>
             <button className="text-label-sm font-medium text-primary-600 dark:text-primary-400 hover:underline">
-              Calculate Installment →
+              Лизинг тооцоолох →
             </button>
           </div>
 
           {/* Quantity */}
           <div className="mt-6">
             <label className="block text-label font-medium text-neutral-900 dark:text-dark-text-primary mb-2">
-              Quantity
+              Тоо ширхэг
             </label>
             <QuantitySelector value={quantity} onChange={setQuantity} max={product.stock} />
           </div>
@@ -154,21 +154,21 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
             <div className="flex items-center gap-2">
               <CheckCircleIcon className="w-5 h-5 text-success-600 dark:text-success-400" />
               <span className="text-body font-medium text-success-700 dark:text-success-400">
-                In Stock
+                Нөөцөд байгаа
               </span>
             </div>
             <span className="text-body-sm text-neutral-600 dark:text-dark-text-secondary">
-              {product.stock} units available
+              {product.stock} ширхэг боломжтой
             </span>
           </div>
 
           {/* Actions */}
           <div className="mt-6 flex gap-3">
             <Button size="lg" className="flex-1" onClick={handleAddToCart}>
-              Add to Cart
+              Сагслах
             </Button>
-            <Button size="lg" className="flex-1 bg-neutral-900 hover:bg-neutral-800">
-              Buy Now
+            <Button size="lg" className="flex-1 bg-neutral-900 text-neutral-400 hover:bg-neutral-800">
+              Худалдаж авах
             </Button>
           </div>
 
@@ -176,15 +176,15 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
           <div className="mt-8 space-y-3">
             <div className="flex items-center gap-3 text-body-sm text-neutral-600 dark:text-dark-text-secondary">
               <TruckIcon className="w-5 h-5" />
-              Free delivery nationwide
+              Үнэгүй хүргэлт
             </div>
             <div className="flex items-center gap-3 text-body-sm text-neutral-600 dark:text-dark-text-secondary">
               <ArrowPathIcon className="w-5 h-5" />
-              7-day return policy
+              7 хоногийн буцаалтын бодлого
             </div>
             <div className="flex items-center gap-3 text-body-sm text-neutral-600 dark:text-dark-text-secondary">
               <ShieldCheckIcon className="w-5 h-5" />
-              Official 1-year warranty
+              1 жилийн албан ёсны баталгаа
             </div>
           </div>
         </div>
@@ -193,17 +193,21 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
       {/* Tabs */}
       <div className="mt-16">
         <div className="flex items-center gap-1 border-b border-neutral-200 dark:border-dark-border-default mb-6">
-          {['Description', 'Specifications', 'Reviews'].map((tab) => (
+          {[
+            { en: 'Description', mn: 'Тайлбар' },
+            { en: 'Specifications', mn: 'Техникийн үзүүлэлт' },
+            { en: 'Reviews', mn: 'Үнэлгээ' }
+          ].map((tab) => (
             <button
-              key={tab}
-              onClick={() => setActiveTab(tab.toLowerCase())}
+              key={tab.en}
+              onClick={() => setActiveTab(tab.en.toLowerCase())}
               className={`px-6 py-3 text-label font-medium border-b-2 transition-colors ${
-                activeTab === tab.toLowerCase()
+                activeTab === tab.en.toLowerCase()
                   ? 'border-primary-600 dark:border-primary-500 text-primary-600 dark:text-primary-400'
                   : 'border-transparent text-neutral-600 dark:text-dark-text-secondary hover:text-neutral-900 dark:hover:text-dark-text-primary'
               }`}
             >
-              {tab}
+              {tab.mn}
             </button>
           ))}
         </div>
@@ -220,11 +224,11 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
           {activeTab === 'specifications' && (
             <div className="space-y-3">
               <div className="flex py-3 border-b border-neutral-200 dark:border-dark-border-default">
-                <span className="w-48 text-body-sm font-medium text-neutral-900 dark:text-dark-text-primary">Brand</span>
+                <span className="w-48 text-body-sm font-medium text-neutral-900 dark:text-dark-text-primary">Брэнд</span>
                 <span className="text-body-sm text-neutral-600 dark:text-dark-text-secondary">{product.brand}</span>
               </div>
               <div className="flex py-3 border-b border-neutral-200 dark:border-dark-border-default">
-                <span className="w-48 text-body-sm font-medium text-neutral-900 dark:text-dark-text-primary">Category</span>
+                <span className="w-48 text-body-sm font-medium text-neutral-900 dark:text-dark-text-primary">Ангилал</span>
                 <span className="text-body-sm text-neutral-600 dark:text-dark-text-secondary capitalize">{product.category}</span>
               </div>
             </div>
@@ -233,7 +237,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
           {activeTab === 'reviews' && (
             <div>
               <p className="text-body text-neutral-600 dark:text-dark-text-secondary">
-                No reviews yet. Be the first to review this product!
+                Одоогоор үнэлгээ байхгүй байна. Эхний үнэлэгч болоорой!
               </p>
             </div>
           )}
@@ -244,7 +248,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
       {relatedProducts.length > 0 && (
         <div className="mt-16">
           <h2 className="text-h2 font-bold text-neutral-900 dark:text-dark-text-primary mb-6">
-            You might also like
+            Танд таалагдаж магадгүй
           </h2>
           <ProductGrid products={relatedProducts} />
         </div>

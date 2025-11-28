@@ -34,13 +34,13 @@ export default function WishlistPage() {
             <span className="text-5xl">❤️</span>
           </div>
           <h1 className="text-h2 font-bold text-neutral-900 dark:text-dark-text-primary mb-4">
-            Your wishlist is empty
+            Таны хүслийн жагсаалт хоосон байна
           </h1>
           <p className="text-body text-neutral-600 dark:text-dark-text-secondary mb-8">
-            Start adding products you love to your wishlist
+            Таалагдсан бүтээгдэхүүнүүдээ хүслийн жагсаалтанд нэмж эхлээрэй
           </p>
           <Link href="/">
-            <Button size="lg">Browse Products</Button>
+            <Button size="lg">Бүтээгдэхүүн үзэх</Button>
           </Link>
         </div>
       </div>
@@ -50,10 +50,10 @@ export default function WishlistPage() {
   return (
     <div className="container py-8">
       <h1 className="text-h1 font-bold text-neutral-900 dark:text-dark-text-primary mb-2">
-        Wishlist
+        Хүслийн жагсаалт
       </h1>
       <p className="text-body text-neutral-600 dark:text-dark-text-secondary mb-8">
-        {wishlistProducts.length} {wishlistProducts.length === 1 ? 'item' : 'items'} saved
+        {wishlistProducts.length} бүтээгдэхүүн хадгалсан
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -92,7 +92,7 @@ export default function WishlistPage() {
                   disabled={product.stock === 0}
                 >
                   <ShoppingCartIcon className="w-4 h-4" />
-                  Add to Cart
+                  Сагслах
                 </Button>
                 <button
                   onClick={() => removeItem(product.id)}
