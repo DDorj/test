@@ -215,13 +215,13 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
       </div>
 
       {/* Image Viewer Modal */}
-      <ProductImageViewer
-        images={normalizedImages}
-        currentIndex={0}
-        isOpen={viewerOpen}
-        onClose={() => setViewerOpen(false)}
-        productName={product.name}
-      />
+      {/*<ProductImageViewer*/}
+      {/*  images={normalizedImages}*/}
+      {/*  currentIndex={0}*/}
+      {/*  isOpen={viewerOpen}*/}
+      {/*  onClose={() => setViewerOpen(false)}*/}
+      {/*  productName={product.name}*/}
+      {/*/>*/}
     </div>
   )
 }

@@ -75,23 +75,26 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
         {/* Gallery */}
         <div>
           <div
-            className="aspect-square bg-neutral-50 dark:bg-dark-bg-primary border border-neutral-200 dark:border-dark-border-default rounded-2xl overflow-hidden relative group mb-4 cursor-zoom-in"
+            className="h-96 sm:h-[28rem] md:h-[32rem] lg:h-[36rem] w-full bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl overflow-hidden relative group mb-4 cursor-zoom-in flex items-center justify-center transition-all duration-300"
             onClick={() => setViewerOpen(true)}
           >
-            <div className="relative w-full h-full p-8">
-              <Image
-                src={product.images[selectedImage] || '/placeholder.png'}
-                alt={product.name}
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-contain"
-                priority
-              />
+            <div className="relative w-full h-full p-6 sm:p-8 md:p-10 flex items-center justify-center">
+              <div className="relative w-full h-full">
+                <Image
+                  src={product.images[selectedImage] || '/placeholder.png'}
+                  alt={product.name}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-contain group-hover:scale-105 transition-transform duration-300"
+                  priority
+                  unoptimized={product.images[selectedImage]?.includes('scene7.com') || product.images[selectedImage]?.includes('phonemart.ng')}
+                />
+              </div>
             </div>
 
             {/* Zoom hint overlay */}
-            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 flex items-center justify-center">
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm rounded-full p-3 shadow-lg">
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 flex items-center justify-center rounded-2xl">
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm rounded-full p-4 shadow-lg transform group-hover:scale-110">
                 <svg className="w-8 h-8 text-neutral-900 dark:text-neutral-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
                 </svg>
@@ -101,7 +104,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
 
           {/* Thumbnails */}
           {product.images.length > 1 && (
-            <div className="flex gap-2">
+            <div className="flex gap-3 overflow-x-auto scrollbar-hide pb-2">
               {product.images.map((image, index) => (
                 <button
                   key={index}
@@ -110,14 +113,23 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                     setSelectedImage(index)
                     setViewerOpen(true)
                   }}
-                  className={`flex-shrink-0 w-20 h-20 bg-neutral-100 dark:bg-dark-bg-primary border-2 rounded-lg overflow-hidden transition-all ${
+                  className={`flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 bg-neutral-50 dark:bg-neutral-900 border-2 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-md flex items-center justify-center ${
                     selectedImage === index
-                      ? 'border-primary-600 dark:border-primary-500'
-                      : 'border-transparent hover:border-neutral-300 dark:hover:border-dark-border-hover'
+                      ? 'border-blue-600 dark:border-blue-500 ring-2 ring-blue-200 dark:ring-blue-900/50 scale-105'
+                      : 'border-neutral-200 dark:border-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700'
                   }`}
                   title="Click to select, double-click to zoom"
                 >
-                  <Image src={image} alt="" width={80} height={80} className="object-contain p-1" />
+                  <div className="relative w-full h-full p-2">
+                    <Image
+                      src={image}
+                      alt={`Product view ${index + 1}`}
+                      fill
+                      sizes="100px"
+                      className="object-contain"
+                      unoptimized={image.includes('scene7.com') || image.includes('phonemart.ng')}
+                    />
+                  </div>
                 </button>
               ))}
             </div>
