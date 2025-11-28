@@ -14,6 +14,18 @@ const nextConfig = {
         protocol: 'http',
         hostname: 'localhost',
       },
+      {
+        protocol: 'https',
+        hostname: 't-mobile.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'via.t-mobile.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 't-mobile.scene7.com',
+      },
     ],
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
