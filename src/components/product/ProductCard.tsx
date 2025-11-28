@@ -30,6 +30,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
       image: product.images[0],
     })
   }
+    console.log('Product images:', product?.images?.[0])
 
   return (
     <div className="group relative bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col h-full">
@@ -59,21 +60,27 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
         )}
       </button>
 
-      {/* Image */}
-      <Link href={`/product/${product.slug}`} className="relative block">
-        <div className="aspect-square bg-neutral-50 dark:bg-neutral-800 relative overflow-hidden p-4">
-          <div className="relative w-full h-full">
-            <Image
-              src={product.images[0]}
-              alt={product.name}
-              fill
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-              className="object-contain group-hover:scale-105 transition-transform duration-300"
-              priority={priority}
-            />
-          </div>
-        </div>
-      </Link>
+         {/*Image*/}
+        <Link href={`/product/${product?.slug}`} className="relative block">
+            <div className="aspect-square bg-neutral-50 dark:bg-neutral-800 relative overflow-hidden">
+                {product?.images?.[0] ? (
+                    <img
+                        src={product.images[0]}
+                        alt={product?.name || "Product image"}
+                        className="w-full h-full object-contain p-6 group-hover:scale-105 transition-transform duration-300"
+                        loading={priority ? "eager" : "lazy"}
+                    />
+                ) : (
+                    // Placeholder зураг
+                    <div className="w-full h-full flex items-center justify-center text-neutral-400">
+                        <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                        </svg>
+                    </div>
+                )}
+            </div>
+        </Link>
+
 
       {/* Content */}
       <div className="flex flex-col flex-1 p-4">

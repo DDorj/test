@@ -73,10 +73,10 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
         {/* Gallery */}
         <div>
           <div className="aspect-square bg-neutral-50 dark:bg-dark-bg-primary border border-neutral-200 dark:border-dark-border-default rounded-2xl overflow-hidden p-8 relative group mb-4">
-            <Image
+            <img
               src={product.images[selectedImage]}
               alt={product.name}
-              fill
+              // fill
               className="object-contain p-8"
             />
           </div>
