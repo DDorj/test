@@ -7,8 +7,9 @@ import Breadcrumb from '@/components/molecules/Breadcrumb'
 import PriceDisplay from '@/components/molecules/PriceDisplay'
 import RatingStars from '@/components/molecules/RatingStars'
 import QuantitySelector from '@/components/molecules/QuantitySelector'
-import Button from '@/components/atoms/Button'
-import ProductGrid from '@/components/organisms/ProductGrid'
+import Button from '@/components/ui/Button'
+import ProductGrid from '@/components/product/ProductGrid'
+import ProductImageViewer from '@/components/product/ProductImageViewer'
 import { useCartStore } from '@/store/cartStore'
 import { useWishlistStore } from '@/store/wishlistStore'
 import { HeartIcon, TruckIcon, ArrowPathIcon, ShieldCheckIcon } from '@heroicons/react/24/outline'
@@ -22,6 +23,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
   const [activeTab, setActiveTab] = useState('description')
   const [mounted, setMounted] = useState(false)
   const [inWishlist, setInWishlist] = useState(false)
+  const [viewerOpen, setViewerOpen] = useState(false)
 
   useEffect(() => {
     setMounted(true)
@@ -72,13 +74,29 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
       <div className="mt-8 lg:grid lg:grid-cols-2 lg:gap-12">
         {/* Gallery */}
         <div>
-          <div className="aspect-square bg-neutral-50 dark:bg-dark-bg-primary border border-neutral-200 dark:border-dark-border-default rounded-2xl overflow-hidden p-8 relative group mb-4">
-            <img
-              src={product.images[selectedImage]}
-              alt={product.name}
-              // fill
-              className="object-contain p-8"
-            />
+          <div
+            className="aspect-square bg-neutral-50 dark:bg-dark-bg-primary border border-neutral-200 dark:border-dark-border-default rounded-2xl overflow-hidden relative group mb-4 cursor-zoom-in"
+            onClick={() => setViewerOpen(true)}
+          >
+            <div className="relative w-full h-full p-8">
+              <Image
+                src={product.images[selectedImage] || '/placeholder.png'}
+                alt={product.name}
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-contain"
+                priority
+              />
+            </div>
+
+            {/* Zoom hint overlay */}
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 flex items-center justify-center">
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm rounded-full p-3 shadow-lg">
+                <svg className="w-8 h-8 text-neutral-900 dark:text-neutral-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                </svg>
+              </div>
+            </div>
           </div>
 
           {/* Thumbnails */}
@@ -88,11 +106,16 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                 <button
                   key={index}
                   onClick={() => setSelectedImage(index)}
-                  className={`flex-shrink-0 w-20 h-20 bg-neutral-100 dark:bg-dark-bg-primary border-2 rounded-lg overflow-hidden transition-colors ${
+                  onDoubleClick={() => {
+                    setSelectedImage(index)
+                    setViewerOpen(true)
+                  }}
+                  className={`flex-shrink-0 w-20 h-20 bg-neutral-100 dark:bg-dark-bg-primary border-2 rounded-lg overflow-hidden transition-all ${
                     selectedImage === index
                       ? 'border-primary-600 dark:border-primary-500'
                       : 'border-transparent hover:border-neutral-300 dark:hover:border-dark-border-hover'
                   }`}
+                  title="Click to select, double-click to zoom"
                 >
                   <Image src={image} alt="" width={80} height={80} className="object-contain p-1" />
                 </button>
@@ -253,6 +276,15 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
           <ProductGrid products={relatedProducts} />
         </div>
       )}
+
+      {/* Image Viewer Modal */}
+      <ProductImageViewer
+        images={product.images}
+        currentIndex={selectedImage}
+        isOpen={viewerOpen}
+        onClose={() => setViewerOpen(false)}
+        productName={product.name}
+      />
     </div>
   )
 }
